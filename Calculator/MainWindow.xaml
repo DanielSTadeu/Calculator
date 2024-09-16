@@ -1,0 +1,77 @@
+﻿<Window x:Class="Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="500" Width="350"
+        FontFamily="{StaticResource SUSE}" FontSize="28">
+    <Grid Background="#5f6163">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="65*"/>
+        </Grid.RowDefinitions>
+
+        <!--Results-->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="60*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="OldNumberTxtBox" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="30" MaxHeight="30" Margin="10,0,10,0" Grid.Row="0" FontSize="18"/>
+            <TextBox x:Name="ResultsTxtBox" HorizontalAlignment="Stretch" VerticalAlignment="Top" MinHeight="50" MaxHeight="50" Margin="10,0,10,0" Grid.Row="1"/>
+        </Grid>
+
+        <!--Buttons-->
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+                <ColumnDefinition Width="25*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Margin="2" Content="%" Click="PercentagemButtonClick"/>
+            <Button Grid.Row="0" Grid.Column="1" Margin="2" Content="*" Click="OperatorButtonClick"/>
+            <Button Grid.Row="0" Grid.Column="2" Margin="2" Content="/" Click="OperatorButtonClick"/>
+            <Button Grid.Row="0" Grid.Column="3" Margin="2" Content="Del" Click="RemoveCharacterButtonClick"/>
+
+
+            <Button Grid.Row="1" Grid.Column="0" Margin="2" Content="7" Click="NumberButtonClick"/>
+            <Button Grid.Row="1" Grid.Column="1" Margin="2" Content="8" Click="NumberButtonClick"/>
+            <Button Grid.Row="1" Grid.Column="2" Margin="2" Content="9" Click="NumberButtonClick"/>
+            <Button Grid.Row="1" Grid.Column="3" Margin="2" Content="CA" Click="ClearEverythingButtonClick"/>
+
+
+            <Button Grid.Row="2" Grid.Column="0" Margin="2" Content="4" Click="NumberButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="1" Margin="2" Content="5" Click="NumberButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="2" Margin="2" Content="6" Click="NumberButtonClick"/>
+            <Button Grid.Row="2" Grid.Column="3" Margin="2" Content="-" Click="OperatorButtonClick"/>
+
+
+            <Button Grid.Row="3" Grid.Column="0" Margin="2" Content="1" Click="NumberButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="1" Margin="2" Content="2" Click="NumberButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="2" Margin="2" Content="3" Click="NumberButtonClick"/>
+            <Button Grid.Row="3" Grid.Column="3" Margin="2" Content="+" Click="OperatorButtonClick"/>
+
+
+            <Button Grid.Row="4" Grid.Column="0" Margin="2" Content="+/-" Click="InvertValueButtonClick"/>
+            <Button Grid.Row="4" Grid.Column="1" Margin="2" Content="0"  Click="NumberButtonClick"/>
+            <Button Grid.Row="4" Grid.Column="2" Margin="2" Content="," Click="AddDecimalButtonClick"/>
+            <Button Grid.Row="4" Grid.Column="3" Margin="2" Content="=" Click="CalculateButtonClick"/>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>
