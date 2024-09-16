@@ -1,2 +1,2 @@
 # Calculator
- A Simple Calculator mad in C# and WPF
+ A Simple Calculator made in C# and WPF
